@@ -5,7 +5,7 @@
 #include <time.h>
 #include <stdbool.h>
 #include "../Card/card.h"
-#include "../../macros.h"
+#include "../../utils/types.h"
 
 // Function-like-macro
 #define charToInt(x) ((x) % 48)
@@ -24,10 +24,15 @@ typedef enum EN_terminalError_t {
 
 // Function prototypes
 EN_terminalError_t getTransactionDate(ST_terminalData_t *termData);
+
 EN_terminalError_t isCardExpired(ST_cardData_t cardData, ST_terminalData_t termData);
+
 EN_terminalError_t isValidCardPAN(ST_cardData_t *cardData);
+
 EN_terminalError_t getTransactionAmount(ST_terminalData_t *termData);
+
 EN_terminalError_t isBelowMaxAmount(ST_terminalData_t *termData);
+
 EN_terminalError_t setMaxAmount(ST_terminalData_t *termData);
 
 #endif
